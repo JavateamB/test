@@ -20,12 +20,3 @@ The **Inventory Management System** is a Java-based console application designed
 | Marvin Le | Developer | Handling user input and menu system |  
 | Matthew Asante | Tester | Debugging and ensuring functionality |  
 
-
-graph TD;
-    A[Main.java] -->|Handles User Input| B[Inventory.java];
-    B -->|Manages Inventory| C[Item.java];
-    B -->|Performs Operations| D[Add Item];
-    B -->|Performs Operations| E[Update Item];
-    B -->|Performs Operations| F[Remove Item];
-    B -->|Performs Operations| G[View Inventory];
-
