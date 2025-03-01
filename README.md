@@ -18,5 +18,5 @@ The **Inventory Management System** is a Java-based console application designed
 | Lucas Ramirez | Team Lead | Organizing work, ensuring code quality |  
 | Griffin Hayes | Software Engineer | Implementing and coding inventory logic |  
 | Marvin Le | Developer | Handling user input and menu system |  
-| Matthew Asante | Tester | Debugging and ensuring functionality |  
+| Matthew Asante | Business Analyst | Ensuring code functionality is suitable for business needs |  
 
