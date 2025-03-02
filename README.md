@@ -1,14 +1,14 @@
-# Inventory Management System  
+# Library Checkout System  
 
 ## Project Overview  
-The **Inventory Management System** is a Java-based console application designed to help users efficiently manage inventory records. This system allows users to add new items, update existing inventory quantities and prices, remove items when they are no longer needed, and view the current list of available inventory. The program is structured to be simple yet scalable, making it a great starting point for a larger program. Since this project is a console-based application, all interactions occur through a text-based menu system, and data is stored in memory during runtime. Future improvements may include file-based storage for persistence, category organization, and user authentication to enhance usability.  
+The **Library Checkout System** is a Java-based console application designed to help users efficiently manage library inventory records. This system allows users to checkout different books, search for different books in the library, add books to a list, and view the current list of unavailable inventory. The program is structured to be simple yet scalable, making it a great starting point for a larger program. Since this project is a console-based application, all interactions occur through a text-based menu system, and data is stored in memory during runtime. Future improvements may include file-based storage for persistence, category organization, and user authentication to enhance usability.  
    
 
 ## Features  
-- Add new items with name, quantity, and price  
-- Update existing items  
-- Remove items from inventory  
-- View current inventory list  
+- Checkout books that are available  
+- Search for specific books  
+- Add books to a list  
+- View the list of checked out books  
 - Console-based interface (no GUI or database)  
 
 
