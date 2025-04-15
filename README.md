@@ -24,10 +24,21 @@ The **Library Checkout System** is a Java-based console application designed to 
 
 1) implementing JavaDocs
      * Javadocs is a tool that alows us a more specific form of documentation and communication. With it, we can use special tags to describe classes, methods, fields, constructors, etc.
-     * Each Doc Comment is written in HTML, and must precede a class, constructor, or method decleration.
-     * Made by a description --> block tags.
-    EX) The block tags are @param, @return, @see
+     * It requires a specific style of block comment that starts with /** and ends with */. In between is the range where you can comment.
+     * Inside that range ^^^, describe the code and what it does (method, field, etc.) --> use tags to document details like parameters and return values
 
+Tags: 
+@author (Classes and interfaces only)
+@version (Classes and interfaces only)
+@param (Methods and Constructors only)
+@return (Methods only)
+@exception (can also use @throws)
+@see
+@since
+@serial 
+@deprecated
+    
+    
 
 
 
