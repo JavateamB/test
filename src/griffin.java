@@ -33,6 +33,7 @@ public class griffin {
      *
      * @param name a new person name pass the string variable <code>String</code>
      */
+    //hello//
     public void setName(String name) {
         this.name = name;
     }
