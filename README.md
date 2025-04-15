@@ -38,6 +38,7 @@ Tags:
 @serial 
 @deprecated
 
+These tags are similar to hyperlinks. As we write our code, we can reference other parts of it, helping us stay organized and relay information quicker and smoother.  
 
     
     
