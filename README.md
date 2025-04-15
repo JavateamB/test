@@ -20,3 +20,17 @@ The **Library Checkout System** is a Java-based console application designed to 
 | Marvin Le | Developer | Handling user input and menu system |  
 | Matthew Asante | Business Analyst | Ensuring code functionality is suitable for business needs |  
 
+---------------------------------------------------------------------------------------------------
+
+1) implementing JavaDocs
+     * Javadocs is a tool that alows us a more specific form of documentation and communication. With it, we can use special tags to describe classes, methods, fields, constructors, etc.
+     * Each Doc Comment is written in HTML, and must precede a class, constructor, or method decleration.
+     * Made by a description --> block tags.
+    EX) The block tags are @param, @return, @see
+
+
+
+
+
+
+   
