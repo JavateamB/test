@@ -4,7 +4,7 @@
  * Person call with fields,
  */
 
-public class griffin {
+public class Book {
     /**
      * name of a person
      */
@@ -15,7 +15,7 @@ public class griffin {
      *
      * @param name inital person name
      */
-    public griffin(String name) {
+    public Book(String name) {
         this.name = name;
     }
 

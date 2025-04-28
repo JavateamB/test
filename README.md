@@ -15,9 +15,9 @@ The **Library Checkout System** is a Java-based console application designed to 
 ## Team Members and Roles  
 | Name | Role | Responsibilities |  
 |------|------|----------------|  
-| Lucas Ramirez | Team Lead | Organizing work, ensuring code quality |  
+| User Ramirez | Team Lead | Organizing work, ensuring code quality |  
 | Griffin Hayes | Software Engineer | Implementing and coding inventory logic |  
-| Marvin Le | Developer | Handling user input and menu system |  
+| Library Le | Developer | Handling user input and menu system |  
 | Matthew Asante | Business Analyst | Ensuring code functionality is suitable for business needs |  
 
 ---------------------------------------------------------------------------------------------------

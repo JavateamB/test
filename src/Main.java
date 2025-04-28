@@ -4,7 +4,7 @@
  *
  * @author Shiva Sharma
  * @version 1.0
- * @see griffin
+ * @see Book
  */
 
 
@@ -21,7 +21,7 @@ public class Main {
 
 
 
-        griffin person = new griffin("Shiva Sharma");
+        Book person = new Book("Shiva Sharma");
         System.out.println(person.getName());
 
     }
