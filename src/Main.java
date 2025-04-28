@@ -7,7 +7,7 @@
  * @see Book
  */
 
-
+import java.util.*;
 
 public class Main {
 
@@ -19,10 +19,51 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+        Library library = new Library();
+
+        int choice;
+        do {
+
+            System.out.println("\n===== Library Menu =====");
+            System.out.println("1. List all books");
+            System.out.println("2. Search for a book");
+            System.out.println("3. Checkout a book");
+            System.out.println("4. Return a book");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+
+            choice = input.nextInt();
+            input.nextLine();
+
+            switch (choice) {
+                case 1:
+                    library.listAllBooks();
+                    break;
+                case 2:
+                    System.out.print("Enter book title to search: ");
+                    String title = input.nextLine();
+                    library.searchBook(title);
+                    break;
+                case 3:
+                    System.out.print("Enter book title to checkout: ");
+                    String checkoutTitle = input.nextLine();
+                    library.checkoutBook(user, checkoutTitle);
+                    break;
+                case 4:
+                    System.out.print("Enter book title to return: ");
+                    String returnTitle = input.nextLine();
+                    library.returnBook(user, returnTitle);
+                    break;
+                case 5:
+                    System.out.println("Thank you for using the library system!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
 
 
-        Book person = new Book("Shiva Sharma");
-        System.out.println(person.getName());
+        } while (choice != 5);
 
     }
 }
