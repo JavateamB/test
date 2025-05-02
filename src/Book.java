@@ -1,47 +1,35 @@
-/**
-
- * griffin class for storing user information
- * Person call with fields,
- */
-
 public class Book {
-    /**
-     * name of a person
-     */
-    private String name;
 
-    /**
-     * This is a construction to initialize person object
-     *
-     * @param name inital person name
-     */
-    public Book(String name) {
-        this.name = name;
+    private String title;
+    private String author;
+    private String isls;
+    private boolean availability;
+
+
+    public Book(String title, String author, String isls){
+        this.title = title;
+        this.author = author;
+        this.isls = isls;
+        this.availability = true;
     }
 
-    /**
-     * Display person name
-     *
-     * @return person name
-     */
-    public String getName() {
-        return "This method will display a person name " + name;
+    public String getTitle(){
+        return title;
     }
 
-    /**
-     * To set a person name
-     *
-     * @param name a new person name pass the string variable <code>String</code>
-     */
-    //hello//
-    public void setName(String name) {
-        this.name = name;
+    public boolean isAvailable(){
+        return availability;
     }
 
-    @Override
-    public String toString() {
-        return ("Person Name " + name);
+    public void setAvailable(boolean availability) {
+        this.availability = availability;
     }
+
+    public String toString(){
+        return "\"" + title + "\" by " + author + " (ISLS: " + isls + ") - " + (availability ? "Available" : "Checked Out");
+    }
+
+
 
 }
 

@@ -48,7 +48,7 @@ public class Main {
                 case 2:
                     System.out.print("Enter book title to search: ");
                     String title = input.nextLine();
-                    library.searchBook(title);
+                    library.searchTitle(title);
                     break;
                 case 3:
                     System.out.print("Enter book title to checkout: ");
