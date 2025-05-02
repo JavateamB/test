@@ -53,7 +53,7 @@ public class Main {
                 case 3:
                     System.out.print("Enter book title to checkout: ");
                     String checkoutTitle = input.nextLine();
-                    library.checkoutBook(user, checkoutTitle);
+                    library.checkBook(user, checkoutTitle);
                     break;
                 case 4:
                     System.out.print("Enter book title to return: ");
