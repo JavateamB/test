@@ -1,4 +1,9 @@
 
+/*This Main.java file contains a Scanner class, do-while loop, switch statement, logical operators
+  println, method calling, and object creation
+*/
+
+
 /**
  * This a main class to test Person.java
  *
