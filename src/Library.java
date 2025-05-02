@@ -1,3 +1,7 @@
+/*Library.java has arrays, constructors, object creation, loops, string methods, method return
+    encapsulation, method parameters by value
+*/
+
 public class Library {
 
     private Book[] books;
