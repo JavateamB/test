@@ -14,6 +14,7 @@
 
 import java.util.*;
 
+
 public class Main {
 
     /**
@@ -26,6 +27,12 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         Library library = new Library();
+
+        //Creating a user
+        System.out.print("Enter your name: ");
+        String userName = input.nextLine();
+        User user = new User(userName);
+
 
         int choice;
         do {
@@ -45,10 +52,15 @@ public class Main {
                 case 1:
                     library.listAllBooks();
                     break;
-                case 2:
+                case 2: // Fixed case 2 to actually make it work
                     System.out.print("Enter book title to search: ");
                     String title = input.nextLine();
-                    library.searchTitle(title);
+                    Book foundBook = library.searchTitle(title);
+                    if (foundBook != null) {
+                        System.out.println("Book found: " + foundBook);
+                    } else {
+                        System.out.println("Book not found in the library.");
+                    }
                     break;
                 case 3:
                     System.out.print("Enter book title to checkout: ");
@@ -65,6 +77,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
+                    break; // We were missing a break statement here, so I added it - Marvin
             }
 
 

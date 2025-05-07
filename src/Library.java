@@ -2,7 +2,7 @@
     encapsulation, method parameters by value
 */
 
-public class Library {
+public class Library{
 
     private Book[] books;
     private int bookCount;
