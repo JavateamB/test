@@ -1,43 +1,26 @@
-//Book class has conditional operator, constructor, more this keywords//
 public class Book {
+    public String title; //public added for realism
+    public String author;
+    public boolean available;
 
-    //Encapsulation at its finest right here//
-    private String title;
-    private String author;
-    private String isls;
-    private boolean availability;
-
-
-    public Book(String title, String author, String isls){
-        //this keyword//
-        this.title = title;
-        this.author = author;
-        this.isls = isls;
-        this.availability = true;
+    public Book(String t, String a) {
+        title = t;
+        author = a;
+        available = true;
     }
 
-    public String getTitle(){
-        return title;
+    public Book(String t) {
+        this(t,"Author Unkown"); //overloading constructor
+
     }
 
-    public boolean isAvailable(){
-        return availability;
+    public boolean matches(String keyword) {
+        return title.toLowerCase().contains(keyword.toLowerCase());
+        //^^String Class method
     }
 
-    public void setAvailable(boolean availability) {
-        this.availability = availability;
+    public String toString() {
+        String status = available ? "Available" : "Checked Out";
+        return title + " by " + author + "(" + status + ")";
     }
-
-    public String getAuthor(){
-        return author;
-    }
-
-    public String toString(){
-        //conditional operator where it says availability ?//
-        return "\"" + title + "\" by " + author + " (ISLS: " + isls + ") - " + (availability ? "Available" : "Checked Out");
-    }
-
-
-
 }
-

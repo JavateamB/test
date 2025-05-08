@@ -1,115 +1,67 @@
-/*Library.java has arrays, constructors, object creation, loops, string methods, method return
-    encapsulation, method parameters by value, more print
-*/
+import java.util.*;
 
-public class Library{
+public class Library {
+    private ArrayList<Book> books = new ArrayList<>();
 
-    private Book[] books;
-    private int bookCount;
-
-    //Very big constructor, makes the list of books available for user//
-    public Library(){
-
-        books = new Book[15];
-        bookCount = 0;
-
-        books[bookCount] = new Book("Percy Jackson", "Rick Riordan", "ISLS100");
-        bookCount++;
-        books[bookCount] = new Book("Animal Farm", "George Orwell", "ISLS101");
-        bookCount++;
-        books[bookCount] = new Book("Pride and Prejudice", "Jane Austen", "ISLS102");
-        bookCount++;
-        books[bookCount] = new Book("War and Peace", "Leo Tolstoy", "ISLS103");
-        bookCount++;
-        books[bookCount] = new Book("Oliver Twist", "Charles Dickens", "ISLS104");
-        bookCount++;
-        books[bookCount] = new Book("Moby Dick", "Herman Melville", "ISLS105");
-        bookCount++;
-        books[bookCount] = new Book("Iliad", "Homer", "ISLS106");
-        bookCount++;
-        books[bookCount] = new Book("The Odyssey", "Homer", "ISLS107");
-        bookCount++;
-        books[bookCount] = new Book("Hamlet", "William Shakespeare", "ISLS108");
-        bookCount++;
-        books[bookCount] = new Book("Things Fall Apart", "Chinua Achebe", "ISLS109");
-        bookCount++;
-        books[bookCount] = new Book("The Stranger", "Albert Camus", "ISLS110");
-        bookCount++;
-        books[bookCount] = new Book("Invisible Man", "Ralph Ellison", "ISLS111");
-        bookCount++;
-        books[bookCount] = new Book("Lone Survivor", "Marcus Luttrell", "ISLS112");
-        bookCount++;
-        books[bookCount] = new Book("The Republic", "Plato", "ISLS113");
-        bookCount++;
-        books[bookCount] = new Book("Oedipus The King", "Sophocles", "ISLS114");
-        bookCount++;
-
-
-
-
+    public Library() {
+        books.add(new Book("1984", "George Orwell"));
+        books.add(new Book("Hamlet", "Shakespeare" ));
+        books.add(new Book("Moby Dick", "Melville"));
+        books.add(new Book("The Republic", "Plato"));
+        books.add(new Book("The Odyssey", "Homer"));
     }
 
-    //Method to list all the books in the array//
-    public void listAllBooks(){
-        for (int i = 0; i < bookCount; i++){
-            System.out.println(books[i]);
+    public void listAllBooks() {
+        for (int i = 0; i < books.size(); i++) {
+            Book b = books.get(i);
+            if (b != null)
+                System.out.println((i + 1) + ". " + b.toString());
         }
     }
 
-    //Method to search for a specific book//
-    public Book searchTitle(String title){
-        for (int i=0; i<bookCount; i++) {
-            //method from the string class (equalsIgnoreCase)//
-            if (books[i].getTitle().equalsIgnoreCase(title)){
-                return books[i];
-            }
+    public Book searchTitle(String t) {
+        for (Book b : books) {
+            if (b.matches(t)) return b;
         }
         return null;
     }
 
-    //Literally the same method, just overloaded this time//
-    public Book searchTitle(String title, String author) {
-        for (int i = 0; i < bookCount; i++) {
-            if (books[i].getTitle().equalsIgnoreCase(title) &&
-                    books[i].getAuthor().equalsIgnoreCase(author)) {
-                return books[i];
-            }
+    public void checkBook(User user, String title) {
+        Book b = searchTitle(title);
+        if (b == null) {
+            System.out.println("Sorry. Book doesn't exist.");
+            return;
         }
-        return null;
+        if (!b.available) {
+            System.out.println("Already borrowed.");
+            return;
+        }
+        b.available = false;
+        user.checkBook(b);
+        System.out.println("Book checked out!");
     }
 
-
-    //Checking out a book//
-    //method passing argument by a value (User user, String title)//
-    public void checkBook(User user, String title){
-        Book book = searchTitle(title);
-        //operators ! and &&//
-        if (book != null && book.isAvailable()){
-            book.setAvailable(false);
-            user.checkBook(book);
-            System.out.println(book + "checked out successfully.");
-
-
-        }else if (book == null) {
-            System.out.println("book not found.");
-        } else {
-            System.out.println("Book is already checked out.");
-        }
-
-
-    }
-
-    //returning a checked out book//
     public void returnBook(User user, String title) {
-        Book book = searchTitle(title);
-        if (book != null && user.hasBook(book)) {
-            book.setAvailable(true);
-            user.returnBook(book);
-            System.out.println(book + "has been returned successfully.");
-        } else {
-            System.out.println(book + "not found or not checked out by this user.");
+        Book b = searchTitle(title);
+        if (b == null || !user.hasBook(b)) {
+            System.out.println("Can't return. Maybe wrong book?");
+            return;
         }
+        b.available = true;
+        user.returnBook(b);
+        System.out.println("Book returned successfully.");
     }
 
+    public int getBookCount() {
+        return books.size();
+    }
 
+    public Book getBookByIndex(int index) {
+        if (index < books.size()) {
+            return books.get(index);
+        } else {
+            return null; // graceful fallback if needed lol
+        }
+    }
 }
+
