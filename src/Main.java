@@ -5,9 +5,9 @@
 
 
 /**
- * This a main class to test Person.java
+ * This a main class to run the library system
  *
- * @author Shiva Sharma
+ * @author Griffin Hayes
  * @version 1.0
  * @see Book
  */
@@ -25,16 +25,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Scanner object//
         Scanner input = new Scanner(System.in);
         Library library = new Library();
 
-        //Creating a user
+        //Creating a user, print used//
         System.out.print("Enter your name: ");
         String userName = input.nextLine();
         User user = new User(userName);
 
-
+        //variable declaration//
         int choice;
+
+        //do-while loop to continuously run the program until finished//
         do {
 
             System.out.println("\n===== Library Menu =====");
@@ -48,6 +51,7 @@ public class Main {
             choice = input.nextInt();
             input.nextLine();
 
+            //Switch statement for user input scenarios//
             switch (choice) {
                 case 1:
                     library.listAllBooks();
@@ -56,6 +60,7 @@ public class Main {
                     System.out.print("Enter book title to search: ");
                     String title = input.nextLine();
                     Book foundBook = library.searchTitle(title);
+                    //If statement to check for the book title//
                     if (foundBook != null) {
                         System.out.println("Book found: " + foundBook);
                     } else {
