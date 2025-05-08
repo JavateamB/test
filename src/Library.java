@@ -1,5 +1,5 @@
 /*Library.java has arrays, constructors, object creation, loops, string methods, method return
-    encapsulation, method parameters by value
+    encapsulation, method parameters by value, more print
 */
 
 public class Library{
@@ -7,7 +7,7 @@ public class Library{
     private Book[] books;
     private int bookCount;
 
-
+    //Very big constructor, makes the list of books available for user//
     public Library(){
 
         books = new Book[15];
@@ -59,6 +59,7 @@ public class Library{
     //Method to search for a specific book//
     public Book searchTitle(String title){
         for (int i=0; i<bookCount; i++) {
+            //method from the string class (equalsIgnoreCase)//
             if (books[i].getTitle().equalsIgnoreCase(title)){
                 return books[i];
             }
@@ -68,8 +69,10 @@ public class Library{
 
 
     //Checking out a book//
+    //method passing argument by a value (User user, String title)//
     public void checkBook(User user, String title){
         Book book = searchTitle(title);
+        //operators ! and &&//
         if (book != null && book.isAvailable()){
             book.setAvailable(false);
             user.checkBook(book);

@@ -1,6 +1,6 @@
 
 /*This Main.java file contains a Scanner class, do-while loop, switch statement, logical operators
-  println, method calling, and object creation
+  println, method calling, object creation, variables, if statement, constructor, println
 */
 
 
@@ -75,6 +75,7 @@ public class Main {
                 case 4:
                     System.out.print("Enter book title to return: ");
                     String returnTitle = input.nextLine();
+                    //An example of a constructor using returnBook method from Library class//
                     library.returnBook(user, returnTitle);
                     break;
                 case 5:

@@ -1,13 +1,23 @@
+//User class has inheritance, super keyword, encapsulation, abstraction method//
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+//Inheritance extends keyword//
+public class User extends Person{
     private String name;
     private List<Book> checkedOutBooks;
 
     public User(String name) {
-        this.name = name;
+        //super keyword//
+        super(name);
         this.checkedOutBooks = new ArrayList<>();
+    }
+
+    //abstraction for the getPerm method from Person class//
+    @Override
+    public String getPerm(){
+        return "User permissions";
     }
 
     public String getName() {
