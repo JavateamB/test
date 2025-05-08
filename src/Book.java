@@ -28,6 +28,10 @@ public class Book {
         this.availability = availability;
     }
 
+    public String getAuthor(){
+        return author;
+    }
+
     public String toString(){
         //conditional operator where it says availability ?//
         return "\"" + title + "\" by " + author + " (ISLS: " + isls + ") - " + (availability ? "Available" : "Checked Out");

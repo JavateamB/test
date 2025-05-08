@@ -67,6 +67,17 @@ public class Library{
         return null;
     }
 
+    //Literally the same method, just overloaded this time//
+    public Book searchTitle(String title, String author) {
+        for (int i = 0; i < bookCount; i++) {
+            if (books[i].getTitle().equalsIgnoreCase(title) &&
+                    books[i].getAuthor().equalsIgnoreCase(author)) {
+                return books[i];
+            }
+        }
+        return null;
+    }
+
 
     //Checking out a book//
     //method passing argument by a value (User user, String title)//
