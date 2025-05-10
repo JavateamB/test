@@ -26,16 +26,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Scanner object//
+
         Scanner input = new Scanner(System.in);
         Library library = new Library();
 
-        //Creating a user, print used//
+
         System.out.print("Enter your name: ");
         String userName = input.nextLine();
         User user = new User(userName);
 
-        //variable declaration//
+
         int choice;
 
         //do-while loop to continuously run the program until finished//
