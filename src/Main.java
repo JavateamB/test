@@ -4,22 +4,24 @@
 */
 
 
+
+
+import java.util.*;
+
 /**
  * This a main class to run the library system
  *
  * @author Griffin Hayes
- * @version 1.0
  * @see Book
+ * @see Library
+ * @see User
  */
-
-import java.util.*;
-
 
 public class Main {
 
     /**
-     * This is a main method
-     *
+     * This is a main method, showcasing a do-while loop, print, switch-case
+     *  if-else statements, scanner class, and objects
      * @param args stores incoming the command line arg for the program
      */
 

@@ -21,21 +21,25 @@ public class User extends Person{
     }
 
     public String getName() {
+
         return name;
     }
 
     // Method to check out a book
     public void checkBook(Book book) {
+
         checkedOutBooks.add(book);
     }
 
     // Method to check if user has a specific book
     public boolean hasBook(Book book) {
+
         return checkedOutBooks.contains(book);
     }
 
     // Method to return a book
     public void returnBook(Book book) {
+
         checkedOutBooks.remove(book);
     }
 
