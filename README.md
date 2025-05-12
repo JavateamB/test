@@ -40,8 +40,8 @@ Tags:
 
 These tags are similar to hyperlinks. As we write our code, we can reference other parts of it, helping us stay organized and relay information quicker and smoother.  
 
-    
-    
+Full Java docs link : https://javateamb.github.io/test/package-summary.html
+
 
 
 
